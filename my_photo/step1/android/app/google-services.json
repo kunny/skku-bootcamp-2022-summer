@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "619610477876",
+    "project_id": "androidhuman-my-photo",
+    "storage_bucket": "androidhuman-my-photo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619610477876:android:bd380c77d71253350b0161",
+        "android_client_info": {
+          "package_name": "com.androidhuman.my_photo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619610477876-1cjhk2kdhr1p85vbeg1p05q1vv055n5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2bx9Kn1BjwC0vIf1eyPPXeNuvLLYx0ac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619610477876-1cjhk2kdhr1p85vbeg1p05q1vv055n5c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
