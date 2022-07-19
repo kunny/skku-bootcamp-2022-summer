@@ -14,7 +14,7 @@ class NoteListPage extends StatefulWidget {
 }
 
 class _NoteListPageState extends State<NoteListPage> {
-  bool _showAsGrid = false;
+  bool _showAsGrid = true;
 
   @override
   Widget build(BuildContext context) {
