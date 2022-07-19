@@ -1,0 +1,87 @@
+import 'package:flutter/material.dart';
+import 'package:sticky_notes/data/note.dart';
+import 'package:sticky_notes/providers.dart';
+
+class NoteListPage extends StatefulWidget {
+  const NoteListPage({Key? key}) : super(key: key);
+
+  @override
+  State createState() => _NoteListPageState();
+}
+
+class _NoteListPageState extends State<NoteListPage> {
+  bool _showAsGrid = true;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Sticky Notes'),
+        actions: [
+          IconButton(
+            icon: Icon(_showAsGrid ? Icons.list : Icons.grid_view),
+            tooltip: _showAsGrid ? '목록으로 보기' : '격자로 보기',
+            onPressed: () {
+              setState(() {
+                _showAsGrid = !_showAsGrid;
+              });
+            },
+          )
+        ],
+      ),
+      body: _buildCards(noteManager().listNotes()),
+    );
+  }
+
+  Widget _buildCards(List<Note> notes) {
+    return _showAsGrid
+        ? GridView.builder(
+            padding:
+                const EdgeInsets.symmetric(horizontal: 12.0, vertical: 16.0),
+            itemCount: notes.length,
+            itemBuilder: (context, index) => _buildCard(index, notes[index]),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 1,
+            ),
+          )
+        : ListView.builder(
+            padding:
+                const EdgeInsets.symmetric(horizontal: 12.0, vertical: 16.0),
+            itemCount: notes.length,
+            itemBuilder: (context, index) => SizedBox(
+              height: 160,
+              child: _buildCard(index, notes[index]),
+            ),
+          );
+  }
+
+  Widget _buildCard(int index, Note note) {
+    return Card(
+      color: note.color,
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              note.title.isEmpty ? '(제목 없음)' : note.title,
+              style: const TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 16.0),
+            Expanded(
+              child: Text(
+                note.body,
+                overflow: TextOverflow.fade,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
