@@ -45,7 +45,7 @@ The Flutter framework contains two sets of widgets that conform to specific desi
       color: Note.colorBlue,
     ),
     Note(
-      '클래스 101 강의 신청하기',
+      '부트캠프 앱 개발 강의 신청하기',
       color: Note.colorRed,
     ),
     Note(
