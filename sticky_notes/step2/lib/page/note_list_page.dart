@@ -109,7 +109,7 @@ The Flutter framework contains two sets of widgets that conform to specific desi
             padding:
                 const EdgeInsets.symmetric(horizontal: 12.0, vertical: 16.0),
             itemCount: notes.length,
-            itemBuilder: (context, index) => _buildCard(index, notes[index]),
+            itemBuilder: (context, index) => _buildCard(notes[index]),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               childAspectRatio: 1,
@@ -121,12 +121,12 @@ The Flutter framework contains two sets of widgets that conform to specific desi
             itemCount: notes.length,
             itemBuilder: (context, index) => SizedBox(
               height: 160,
-              child: _buildCard(index, notes[index]),
+              child: _buildCard(notes[index]),
             ),
           );
   }
 
-  Widget _buildCard(int index, Note note) {
+  Widget _buildCard(Note note) {
     return Card(
       color: note.color,
       child: Padding(
