@@ -39,7 +39,7 @@ class _NoteListPageState extends State<NoteListPage> {
             padding:
                 const EdgeInsets.symmetric(horizontal: 12.0, vertical: 16.0),
             itemCount: notes.length,
-            itemBuilder: (context, index) => _buildCard(index, notes[index]),
+            itemBuilder: (context, index) => _buildCard(notes[index]),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               childAspectRatio: 1,
@@ -51,12 +51,12 @@ class _NoteListPageState extends State<NoteListPage> {
             itemCount: notes.length,
             itemBuilder: (context, index) => SizedBox(
               height: 160,
-              child: _buildCard(index, notes[index]),
+              child: _buildCard(notes[index]),
             ),
           );
   }
 
-  Widget _buildCard(int index, Note note) {
+  Widget _buildCard(Note note) {
     return Card(
       color: note.color,
       child: Padding(
