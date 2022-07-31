@@ -50,35 +50,34 @@ class _NoteEditPageState extends State<NoteEditPage> {
           ),
         ],
       ),
-      body: SizedBox.expand(
-        child: Container(
-          color: color,
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 16.0),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                TextField(
-                  controller: titleController,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: '제목 입력',
-                  ),
-                  maxLines: 1,
-                  style: const TextStyle(fontSize: 20.0),
+      body: Container(
+        height: double.infinity,
+        color: color,
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 16.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TextField(
+                controller: titleController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: '제목 입력',
                 ),
-                const SizedBox(height: 8.0),
-                TextField(
-                  controller: bodyController,
-                  decoration: const InputDecoration(
-                    border: InputBorder.none,
-                    hintText: '노트 입력',
-                  ),
-                  maxLines: null,
-                  keyboardType: TextInputType.multiline,
+                maxLines: 1,
+                style: const TextStyle(fontSize: 20.0),
+              ),
+              const SizedBox(height: 8.0),
+              TextField(
+                controller: bodyController,
+                decoration: const InputDecoration(
+                  border: InputBorder.none,
+                  hintText: '노트 입력',
                 ),
-              ],
-            ),
+                maxLines: null,
+                keyboardType: TextInputType.multiline,
+              ),
+            ],
           ),
         ),
       ),
