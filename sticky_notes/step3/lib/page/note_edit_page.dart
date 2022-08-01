@@ -130,7 +130,7 @@ class _NoteEditPageState extends State<NoteEditPage> {
         color: color,
       );
 
-      noteManager().addNote(note);
+      noteService().addNote(note);
     } else {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         content: Text('노트를 입력하세요.'),

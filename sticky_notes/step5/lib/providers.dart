@@ -2,7 +2,7 @@ import 'package:sticky_notes/service/note_service.dart';
 
 NoteService? _noteService;
 
-NoteService noteManager() {
+NoteService noteService() {
   if (_noteService == null) {
     _noteService = NoteService();
   }

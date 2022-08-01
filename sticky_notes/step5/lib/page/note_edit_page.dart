@@ -25,7 +25,7 @@ class _NoteEditPageState extends State<NoteEditPage> {
     super.initState();
     final noteId = widget.id;
     if (noteId != null) {
-      noteManager().getNote(noteId).then((note) {
+      noteService().getNote(noteId).then((note) {
         titleController.text = note.title;
         bodyController.text = note.body;
         setState(() {
@@ -151,9 +151,9 @@ class _NoteEditPageState extends State<NoteEditPage> {
 
       final noteId = widget.id;
       if (noteId != null) {
-        noteManager().updateNote(noteId, note);
+        noteService().updateNote(noteId, note);
       } else {
-        noteManager().addNote(note);
+        noteService().addNote(note);
       }
 
       Navigator.pop(context);

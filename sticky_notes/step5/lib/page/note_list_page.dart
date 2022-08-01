@@ -34,7 +34,7 @@ class _NoteListPageState extends State<NoteListPage> {
         ],
       ),
       body: FutureBuilder<List<Note>>(
-        future: noteManager().listNotes(),
+        future: noteService().listNotes(),
         builder: (context, snap) {
           if (snap.connectionState == ConnectionState.waiting) {
             return const Center(

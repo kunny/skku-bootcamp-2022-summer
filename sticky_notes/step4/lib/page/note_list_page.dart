@@ -33,7 +33,7 @@ class _NoteListPageState extends State<NoteListPage> {
           )
         ],
       ),
-      body: _buildCards(noteManager().listNotes()),
+      body: _buildCards(noteService().listNotes()),
       floatingActionButton: FloatingActionButton(
         tooltip: '새 노트',
         onPressed: () {

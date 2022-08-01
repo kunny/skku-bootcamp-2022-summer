@@ -12,7 +12,7 @@ AnalyticsService analyticsService() {
   return _analyticsService!;
 }
 
-NoteService noteManager() {
+NoteService noteService() {
   if (_noteService == null) {
     _noteService = NoteService();
   }

@@ -18,7 +18,7 @@ class _NoteViewPageState extends State<NoteViewPage> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<Note>(
-      future: noteManager().getNote(widget.id),
+      future: noteService().getNote(widget.id),
       builder: (context, snap) {
         if (snap.connectionState == ConnectionState.waiting) {
           return const Center(
@@ -98,7 +98,7 @@ class _NoteViewPageState extends State<NoteViewPage> {
             TextButton(
               child: const Text('예'),
               onPressed: () {
-                noteManager().deleteNote(id);
+                noteService().deleteNote(id);
                 Navigator.popUntil(context, (route) => route.isFirst);
               },
             ),

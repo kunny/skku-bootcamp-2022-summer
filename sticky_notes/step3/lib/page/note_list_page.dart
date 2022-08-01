@@ -29,7 +29,7 @@ class _NoteListPageState extends State<NoteListPage> {
           )
         ],
       ),
-      body: _buildCards(noteManager().listNotes()),
+      body: _buildCards(noteService().listNotes()),
     );
   }
 

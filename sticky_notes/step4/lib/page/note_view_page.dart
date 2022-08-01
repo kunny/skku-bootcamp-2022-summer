@@ -16,7 +16,7 @@ class NoteViewPage extends StatefulWidget {
 class _NoteViewPageState extends State<NoteViewPage> {
   @override
   Widget build(BuildContext context) {
-    final note = noteManager().getNote(widget.index);
+    final note = noteService().getNote(widget.index);
     return Scaffold(
       appBar: AppBar(
         title: Text(note.title.isEmpty ? '(제목 없음)' : note.title),
@@ -77,7 +77,7 @@ class _NoteViewPageState extends State<NoteViewPage> {
             TextButton(
               child: const Text('예'),
               onPressed: () {
-                noteManager().deleteNote(index);
+                noteService().deleteNote(index);
                 Navigator.popUntil(context, (route) => route.isFirst);
               },
             ),
