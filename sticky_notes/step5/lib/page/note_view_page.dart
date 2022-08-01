@@ -56,14 +56,14 @@ class _NoteViewPageState extends State<NoteViewPage> {
               ),
             ],
           ),
-          body: SizedBox.expand(
-            child: Container(
-              color: note.color,
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 12.0, vertical: 16.0),
-                child: Text(note.body),
-              ),
+          body: Container(
+            width: double.infinity,
+            height: double.infinity,
+            color: note.color,
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: 12.0, vertical: 16.0),
+              child: Text(note.body),
             ),
           ),
         );
