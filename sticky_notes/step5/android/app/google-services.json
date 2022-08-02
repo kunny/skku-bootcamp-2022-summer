@@ -29,6 +29,13 @@
             {
               "client_id": "356563551621-ru7h2rd0qpfpe7ujr9bj89b5v163glfh.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "356563551621-si8cft8vl7905pgj0ubruo223k6i3hi9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.androidhuman.class101.stickynotes"
+              }
             }
           ]
         }
