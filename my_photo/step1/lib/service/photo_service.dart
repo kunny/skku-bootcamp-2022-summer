@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:my_photo/model/photo.dart';
 import 'package:my_photo/model/search_result.dart';
 
 const _accessKey = '8ml-5NmwCUwfOIHYwgF0Si88rSydiJ7jaboFbhjtkV4';

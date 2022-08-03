@@ -1,5 +1,4 @@
 import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:my_photo/model/photo.dart';
 
 class AnalyticsService {
   void favorite(String photoId) {
