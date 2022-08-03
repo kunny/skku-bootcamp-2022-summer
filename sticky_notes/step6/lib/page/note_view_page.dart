@@ -36,6 +36,7 @@ class _NoteViewPageState extends State<NoteViewPage> {
         }
 
         final note = snap.requireData;
+        analyticsService().viewNote();
         return Scaffold(
           appBar: AppBar(
             title: Text(note.title.isEmpty ? '(제목 없음)' : note.title),
