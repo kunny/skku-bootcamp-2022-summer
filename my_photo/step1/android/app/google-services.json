@@ -29,6 +29,13 @@
             {
               "client_id": "619610477876-1cjhk2kdhr1p85vbeg1p05q1vv055n5c.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "619610477876-pcd90ns1vqjp95pmmobani6r4tunvqcr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.androidhuman.myPhoto"
+              }
             }
           ]
         }

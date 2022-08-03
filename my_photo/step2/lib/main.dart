@@ -5,6 +5,7 @@ import 'package:my_photo/page/home_page.dart';
 import 'package:my_photo/page/search_result_page.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
