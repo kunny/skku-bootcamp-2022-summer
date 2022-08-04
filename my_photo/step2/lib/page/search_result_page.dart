@@ -66,11 +66,8 @@ class _SearchResultPageState extends State<SearchResultPage> {
   Widget _buildCard(Photo photo) {
     return Align(
       alignment: Alignment.center,
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(
-          minWidth: 240,
-          maxWidth: 500,
-        ),
+      child: SizedBox(
+        width: 500,
         child: Card(
           margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
           child: Column(
